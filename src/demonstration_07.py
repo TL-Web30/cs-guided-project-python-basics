@@ -13,4 +13,24 @@ Examples:
 """
 def nth_smallest(lst, n):
     # Your code here
+    #the array is unsorted
+    # sort list
+    #the smallest element is the first smallest
+    #how do we find the nth smallest?
+
+    #return the nth smallest number
+    #return the integer of smallest
+    #check if n > len(lst) to determine if there is an nth smallest
+    if n > len(lst):
+        return None
+    lst.sort()
+    n = lst[n-1]
+
+    return n
+
+
+print(nth_smallest([7, 5, 3, 1], 1))
+print(nth_smallest([1, 3, 5, 7], 3))
+print(nth_smallest([1, 3, 5, 7], 5))
+print(nth_smallest([7, 3, 5, 1], 2))
 

@@ -17,4 +17,27 @@ Examples:
 """
 def XO(txt):
     # Your code here
+    #figure out the number of o's and x's
+    #check if the number is same, return true if are
+    #return false if not
+    #how to keep track of numbers of x's and o's
+    # we can keep two counters, one for x and one for o
+    x_count = 0
+    o_count = 0
+    for letter in txt:
+        if letter.lower() == 'x':
+            x_count += 1
+        if letter.lower() == 'o':
+            o_count += 1
+
+    if x_count == o_count:
+        return True
+    else:
+        return False
+
+print(XO("ooxx"))
+print(XO("xooxx"))
+print(XO("ooxXm"))
+print(XO("zpzpzpp"))
+print(XO("zzoo"))
 

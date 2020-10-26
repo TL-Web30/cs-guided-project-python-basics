@@ -10,4 +10,17 @@ Examples:
 """
 def string_int(txt):
     # Your code here
+    #check to make sure txt will make sense as an integer
+    #use isnumeric function
+    if str.isnumeric(txt) is True:
+        converted = int(txt)
+        return converted
+    else:
+        return f"'{txt}' is not a valid number"
+
+
+print(string_int("6"))
+print(string_int("1000"))
+print(string_int("12"))
+print(string_int("hi"))
 
